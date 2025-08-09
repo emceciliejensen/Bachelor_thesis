@@ -1,3 +1,12 @@
 /Large_files/
 *.ipynb_checkpoints/
 */
+miniconda3/
+spark-*.tgz
+Large_files/
+data/
+artifacts/
+checkpoints/
+nltk_data/
+pgdata/
+miniconda.sh
