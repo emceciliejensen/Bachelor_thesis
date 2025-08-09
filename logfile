@@ -1,0 +1,229 @@
+2025-07-15 19:02:55.183 CEST [484351] LOG:  starting PostgreSQL 16.1 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 12.3.0, 64-bit
+2025-07-15 19:02:55.183 CEST [484351] LOG:  listening on IPv6 address "::1", port 5432
+2025-07-15 19:02:55.183 CEST [484351] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-07-15 19:02:55.201 CEST [484351] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-07-15 19:02:55.246 CEST [484354] LOG:  database system was shut down at 2025-07-15 19:02:08 CEST
+2025-07-15 19:02:55.312 CEST [484351] LOG:  database system is ready to accept connections
+2025-07-15 19:07:55.346 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 19:08:43.405 CEST [485506] ERROR:  database "myproject" already exists
+2025-07-15 19:08:43.405 CEST [485506] STATEMENT:  CREATE DATABASE myproject
+	    WITH
+	    OWNER = emcj
+	    ENCODING = 'UTF8'
+	    LOCALE_PROVIDER = 'libc'
+	    CONNECTION LIMIT = -1
+	    IS_TEMPLATE = False;
+	
+2025-07-15 19:09:28.048 CEST [484352] LOG:  checkpoint complete: wrote 919 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=92.518 s, sync=0.049 s, total=92.703 s; sync files=309, longest=0.031 s, average=0.001 s; distance=4153 kB, estimate=4153 kB; lsn=0/1893CB0, redo lsn=0/1893C78
+2025-07-15 19:12:55.179 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 19:12:58.612 CEST [484352] LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.253 s, sync=0.060 s, total=3.434 s; sync files=28, longest=0.035 s, average=0.003 s; distance=132 kB, estimate=3751 kB; lsn=0/18B4E08, redo lsn=0/18B4DD0
+2025-07-15 19:22:55.742 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 19:22:57.324 CEST [484352] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.840 s, sync=0.488 s, total=1.582 s; sync files=7, longest=0.485 s, average=0.070 s; distance=45 kB, estimate=3381 kB; lsn=0/18C05B0, redo lsn=0/18C0578
+2025-07-15 19:27:55.424 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 19:27:57.829 CEST [484352] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.967 s, sync=0.254 s, total=2.406 s; sync files=16, longest=0.227 s, average=0.016 s; distance=83 kB, estimate=3051 kB; lsn=0/18D51F0, redo lsn=0/18D51B8
+2025-07-15 19:28:41.012 CEST [485703] ERROR:  column "NormalizedName" has pseudo-type cstring
+2025-07-15 19:28:41.012 CEST [485703] STATEMENT:  CREATE TABLE public."Affiliations"
+	(
+	    "AffiliationId" integer,
+	    "Rank" integer,
+	    "NormalizedName" cstring[],
+	    "DisplayName" cstring[],
+	    "GridId" cstring[],
+	    "OfficialPage" cstring[],
+	    "WikiPage" cstring[],
+	    "PaperCount" integer,
+	    "PaperFamilyCount" integer,
+	    "CitationCount" integer,
+	    "Iso3166Code" cstring[],
+	    "Latitude" integer,
+	    "Longtitude" integer,
+	    "CreatedDate" date
+	);
+	
+	
+	
+	ALTER TABLE IF EXISTS public."Affiliations"
+	    OWNER to emcj;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+2025-07-15 19:30:41.290 CEST [485703] ERROR:  column "Iso3166Code" has pseudo-type cstring
+2025-07-15 19:30:41.290 CEST [485703] STATEMENT:  CREATE TABLE public."Affiliations"
+	(
+	    "AffiliationId" integer,
+	    "Rank" integer,
+	    "NormalizedName" character varying,
+	    "DisplayName" character varying,
+	    "GridId" character varying,
+	    "OfficialPage" character varying,
+	    "WikiPage" character varying,
+	    "PaperCount" integer,
+	    "PaperFamilyCount" integer,
+	    "CitationCount" integer,
+	    "Iso3166Code" cstring[],
+	    "Latitude" integer,
+	    "Longtitude" integer,
+	    "CreatedDate" date
+	);
+	
+	
+	
+	ALTER TABLE IF EXISTS public."Affiliations"
+	    OWNER to emcj;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+2025-07-15 19:32:55.929 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 19:32:58.744 CEST [484352] LOG:  checkpoint complete: wrote 26 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.541 s, sync=0.085 s, total=2.815 s; sync files=25, longest=0.053 s, average=0.004 s; distance=123 kB, estimate=2758 kB; lsn=0/18F41D8, redo lsn=0/18F41A0
+2025-07-15 22:17:58.944 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 22:18:02.016 CEST [484352] LOG:  checkpoint complete: wrote 28 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.765 s, sync=0.148 s, total=3.072 s; sync files=22, longest=0.089 s, average=0.007 s; distance=109 kB, estimate=2493 kB; lsn=0/190F830, redo lsn=0/190F7F8
+2025-07-15 22:22:58.116 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 22:23:00.490 CEST [484352] LOG:  checkpoint complete: wrote 21 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.074 s, sync=0.125 s, total=2.374 s; sync files=16, longest=0.067 s, average=0.008 s; distance=115 kB, estimate=2255 kB; lsn=0/192C650, redo lsn=0/192C618
+2025-07-15 22:27:58.590 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 22:28:01.587 CEST [484352] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.437 s, sync=0.253 s, total=2.998 s; sync files=21, longest=0.175 s, average=0.013 s; distance=138 kB, estimate=2044 kB; lsn=0/194F0E0, redo lsn=0/194F0A8
+2025-07-15 22:32:58.687 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 22:33:01.026 CEST [484352] LOG:  checkpoint complete: wrote 21 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.043 s, sync=0.139 s, total=2.339 s; sync files=16, longest=0.104 s, average=0.009 s; distance=108 kB, estimate=1850 kB; lsn=0/196A2A0, redo lsn=0/196A268
+2025-07-15 22:42:58.226 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 22:43:00.787 CEST [484352] LOG:  checkpoint complete: wrote 23 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.258 s, sync=0.142 s, total=2.562 s; sync files=22, longest=0.102 s, average=0.007 s; distance=114 kB, estimate=1676 kB; lsn=0/1986C48, redo lsn=0/1986C10
+2025-07-15 23:02:59.188 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:03:01.418 CEST [484352] LOG:  checkpoint complete: wrote 18 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.765 s, sync=0.211 s, total=2.231 s; sync files=16, longest=0.148 s, average=0.014 s; distance=86 kB, estimate=1517 kB; lsn=0/199C7F8, redo lsn=0/199C7C0
+2025-07-15 23:07:59.518 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:08:01.362 CEST [484352] LOG:  checkpoint complete: wrote 16 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.571 s, sync=0.129 s, total=1.844 s; sync files=16, longest=0.102 s, average=0.009 s; distance=95 kB, estimate=1375 kB; lsn=0/19B4668, redo lsn=0/19B4630
+2025-07-15 23:12:59.462 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:13:02.811 CEST [484352] LOG:  checkpoint complete: wrote 31 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.039 s, sync=0.115 s, total=3.349 s; sync files=28, longest=0.087 s, average=0.005 s; distance=132 kB, estimate=1251 kB; lsn=0/19D57D0, redo lsn=0/19D5798
+2025-07-15 23:17:59.911 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:18:04.526 CEST [484352] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.379 s, sync=0.065 s, total=4.615 s; sync files=28, longest=0.061 s, average=0.003 s; distance=185 kB, estimate=1144 kB; lsn=0/1A03EF0, redo lsn=0/1A03EB8
+2025-07-15 23:22:59.627 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:23:01.936 CEST [484352] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.939 s, sync=0.175 s, total=2.309 s; sync files=20, longest=0.146 s, average=0.009 s; distance=101 kB, estimate=1040 kB; lsn=0/1A1D628, redo lsn=0/1A1D5F0
+2025-07-15 23:28:00.037 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:28:02.827 CEST [484352] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.480 s, sync=0.151 s, total=2.791 s; sync files=24, longest=0.099 s, average=0.007 s; distance=122 kB, estimate=948 kB; lsn=0/1A3BEC8, redo lsn=0/1A3BE90
+2025-07-15 23:33:00.928 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:33:03.262 CEST [484352] LOG:  checkpoint complete: wrote 21 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.067 s, sync=0.133 s, total=2.334 s; sync files=21, longest=0.106 s, average=0.007 s; distance=111 kB, estimate=864 kB; lsn=0/1A57CC0, redo lsn=0/1A57C88
+2025-07-15 23:38:00.362 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:38:03.811 CEST [484352] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.146 s, sync=0.148 s, total=3.449 s; sync files=22, longest=0.116 s, average=0.007 s; distance=132 kB, estimate=791 kB; lsn=0/1A79010, redo lsn=0/1A78FD8
+2025-07-15 23:40:50.187 CEST [543627] FATAL:  role "proj-heinie" does not exist
+2025-07-15 23:44:49.987 CEST [543980] ERROR:  column "paperid" referenced in foreign key constraint does not exist
+2025-07-15 23:44:49.987 CEST [543980] STATEMENT:  ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY (PaperId)
+	REFERENCES "Papers"(PaperId);
+	
+	ALTER TABLE "PaperReferences"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY (PaperId)
+	REFERENCES "Papers"(PaperId);
+	
+	ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY (PaperReferenceId)
+	REFERENCES "Papers"(PaperId);
+2025-07-15 23:46:35.541 CEST [543980] ERROR:  there is no unique constraint matching given keys for referenced table "Papers"
+2025-07-15 23:46:35.541 CEST [543980] STATEMENT:  ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperId")
+	REFERENCES "Papers"("PaperId");
+	
+	ALTER TABLE "PaperReferences"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperId")
+	REFERENCES "Papers"("PaperId");
+	
+	ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperReferenceId")
+	REFERENCES "Papers"("PaperId");
+2025-07-15 23:47:27.613 CEST [543980] ERROR:  constraint "fk_paper" for relation "PaperResources" already exists
+2025-07-15 23:47:27.613 CEST [543980] STATEMENT:  ALTER TABLE "Papers"
+	ADD CONSTRAINT papers_pkey PRIMARY KEY ("PaperId");
+	
+	ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperId")
+	REFERENCES "Papers"("PaperId");
+	
+	ALTER TABLE "PaperReferences"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperId")
+	REFERENCES "Papers"("PaperId");
+	
+	ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperReferenceId")
+	REFERENCES "Papers"("PaperId");
+2025-07-15 23:47:56.645 CEST [543980] ERROR:  constraint "fk_paper" for relation "PaperReferences" already exists
+2025-07-15 23:47:56.645 CEST [543980] STATEMENT:  ALTER TABLE "Papers"
+	ADD CONSTRAINT papers_pkey PRIMARY KEY ("PaperId");
+	
+	ALTER TABLE "PaperResources"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperId")
+	REFERENCES "Papers"("PaperId");
+	
+	ALTER TABLE "PaperReferences"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperId")
+	REFERENCES "Papers"("PaperId");
+	
+	ALTER TABLE "PaperReferences"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperReferenceId")
+	REFERENCES "Papers"("PaperId");
+2025-07-15 23:48:01.000 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:48:04.781 CEST [484352] LOG:  checkpoint complete: wrote 36 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.577 s, sync=0.045 s, total=3.782 s; sync files=31, longest=0.043 s, average=0.002 s; distance=134 kB, estimate=726 kB; lsn=0/1A9AB10, redo lsn=0/1A9AAD8
+2025-07-15 23:48:35.104 CEST [543980] ERROR:  constraint "fk_paper" for relation "PaperReferences" already exists
+2025-07-15 23:48:35.104 CEST [543980] STATEMENT:  ALTER TABLE "PaperReferences"
+	ADD CONSTRAINT fk_paper
+	FOREIGN KEY ("PaperReferenceId")
+	REFERENCES "Papers"("PaperId");
+2025-07-15 23:52:18.948 CEST [543980] ERROR:  multiple primary keys for table "Affiliations" are not allowed
+2025-07-15 23:52:18.948 CEST [543980] STATEMENT:  ALTER TABLE "Affiliations"
+	ADD CONSTRAINT affiliations_pkey PRIMARY KEY ("AffiliationId");
+2025-07-15 23:53:00.882 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:53:04.848 CEST [484352] LOG:  checkpoint complete: wrote 38 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.802 s, sync=0.040 s, total=3.966 s; sync files=28, longest=0.027 s, average=0.002 s; distance=173 kB, estimate=670 kB; lsn=0/1AC6080, redo lsn=0/1AC6048
+2025-07-15 23:57:06.454 CEST [543980] ERROR:  constraint "fk_affili_paa" for relation "PaperAuthorAffiliations" already exists
+2025-07-15 23:57:06.454 CEST [543980] STATEMENT:  ALTER TABLE "PaperAuthorAffiliations"
+	ADD CONSTRAINT fk_affili_paa
+	FOREIGN KEY ("AffiliationId")
+	REFERENCES "Affiliations"("AffiliationId");
+2025-07-15 23:58:00.948 CEST [484352] LOG:  checkpoint starting: time
+2025-07-15 23:58:04.449 CEST [484352] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.294 s, sync=0.091 s, total=3.501 s; sync files=25, longest=0.065 s, average=0.004 s; distance=140 kB, estimate=617 kB; lsn=0/1AE9178, redo lsn=0/1AE9140
+2025-07-16 00:03:00.549 CEST [484352] LOG:  checkpoint starting: time
+2025-07-16 00:03:02.925 CEST [484352] LOG:  checkpoint complete: wrote 21 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.039 s, sync=0.147 s, total=2.377 s; sync files=18, longest=0.081 s, average=0.009 s; distance=81 kB, estimate=564 kB; lsn=0/1AFD8B0, redo lsn=0/1AFD878
+2025-07-16 00:18:11.918 CEST [543980] ERROR:  constraint "fk_fieldofstudy" for relation "FieldOfStudyChildren" already exists
+2025-07-16 00:18:11.918 CEST [543980] STATEMENT:  ALTER TABLE "FieldOfStudyChildren"
+	ADD CONSTRAINT fk_fieldofstudy
+	FOREIGN KEY ("FieldOfStudyId")
+	REFERENCES "FieldOfStudy"("FieldOfStudyId");
+2025-07-16 00:23:01.300 CEST [484352] LOG:  checkpoint starting: time
+2025-07-16 00:23:05.309 CEST [484352] LOG:  checkpoint complete: wrote 38 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.808 s, sync=0.023 s, total=4.009 s; sync files=27, longest=0.021 s, average=0.001 s; distance=156 kB, estimate=523 kB; lsn=0/1B24940, redo lsn=0/1B24908
+2025-07-16 00:25:29.936 CEST [543980] ERROR:  relation "AuthorshipsPerGenderAndField" does not exist
+2025-07-16 00:25:29.936 CEST [543980] STATEMENT:  ALTER TABLE "AuthorshipsPerGenderAndField"
+	ADD CONSTRAINT fk_apygaf_field
+	FOREIGN KEY ("FieldOfStudyId")
+	REFERENCES "FieldOfStudy"("FieldOfStudyId");
+2025-07-16 00:28:01.408 CEST [484352] LOG:  checkpoint starting: time
+2025-07-16 00:28:06.355 CEST [484352] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.753 s, sync=0.057 s, total=4.947 s; sync files=25, longest=0.047 s, average=0.003 s; distance=246 kB, estimate=495 kB; lsn=0/1B622A8, redo lsn=0/1B62238
+2025-07-16 14:03:15.289 CEST [484352] LOG:  checkpoint starting: time
+2025-07-16 14:03:15.885 CEST [484352] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.235 s, sync=0.118 s, total=0.597 s; sync files=2, longest=0.118 s, average=0.059 s; distance=14 kB, estimate=447 kB; lsn=0/1B65BC0, redo lsn=0/1B65B88
+2025-07-16 15:07:27.735 CEST [484351] LOG:  received smart shutdown request
+2025-07-16 15:07:27.738 CEST [834345] FATAL:  terminating connection due to administrator command
+2025-07-16 15:07:27.740 CEST [834343] FATAL:  terminating connection due to administrator command
+2025-07-16 15:07:27.743 CEST [834603] FATAL:  terminating connection due to administrator command
+2025-07-16 15:07:28.012 CEST [484351] LOG:  received SIGHUP, reloading configuration files
+2025-07-16 15:07:28.022 CEST [484351] LOG:  background worker "logical replication launcher" (PID 484357) exited with exit code 1
+2025-07-16 15:07:28.210 CEST [484352] LOG:  shutting down
+2025-07-16 15:07:28.284 CEST [484352] LOG:  checkpoint starting: shutdown immediate
+2025-07-16 15:07:28.515 CEST [484352] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.305 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=402 kB; lsn=0/1B65C70, redo lsn=0/1B65C70
+2025-07-16 15:07:28.712 CEST [484351] LOG:  database system is shut down
