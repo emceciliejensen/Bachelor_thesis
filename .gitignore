@@ -1,0 +1,9 @@
+*.ipynb_checkpoints/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.zip
+*.gz
+Large_files/
+*.csv
