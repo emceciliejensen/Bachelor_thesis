@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=cite_field_author_gender
+#SBATCH --output=cite_field_author_gender.out
+#SBATCH --error=cite_field_author_gender.err
+#SBATCH --time=06:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=128G
+#SBATCH --partition=scavenge
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate myenv
+
+python cite_field_author_gender.py
+
+

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/emcj/h-index_part2.py", line 24, in <module>
+    author_paper_map = pickle.load(f)
+EOFError: Ran out of input

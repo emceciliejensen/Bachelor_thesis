@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --job-name=Author_Genderized_Full
+#SBATCH --output=/home/emcj/Author_Genderized_Full.out
+#SBATCH --error=/home/emcj/Author_Genderized_Full.errr
+#SBATCH --time=04:00:00
+#SBATCH --mem=100G
+#SBATCH --cpus-per-task=1
+#SBATCH --partition=scavenge
+
+echo "Starting FULL merge at $(date)"
+
+OUTFILE="/home/emcj/data/MAG/Authors_Genderized_Full.csv"
+
+head -n 1 /home/data_shares/scaince/mag/mag/project/AuthorsGenderized.txt/part-00000-*.csv > "$OUTFILE"
+
+for f in /home/data_shares/scaince/mag/mag/project/AuthorsGenderized.txt/part-*.csv; do
+    tail -n +2 "$f" >> "$OUTFILE"
+done
+
+echo "FULL merge complete at $(date)"
+

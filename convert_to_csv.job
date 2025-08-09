@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=tsv2csv
+#SBATCH --output=tsv2csv.out
+#SBATCH --error=tsv2csv.err
+#SBATCH --time=04:00:00
+#SBATCH --mem=64G
+#SBATCH --cpus-per-task=4
+
+module load python
+python convert_to_csv.py
+
+

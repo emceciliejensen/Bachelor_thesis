@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=papers_to_csv
+#SBATCH --output=papers_output.out
+#SBATCH --error=papers_error.err
+#SBATCH --time=24:00:00
+#SBATCH --mem=64G
+
+module load python
+python convert_txt_to_csv.py --input Papers_with_header.txt --output Papers.csv
+
+

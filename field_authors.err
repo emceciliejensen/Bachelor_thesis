@@ -1,0 +1,2 @@
+/var/spool/slurmd/job09628/slurm_script: line 15: 1049265 Killed                  python generate_field_author_csvs.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=9628.batch. Some of the step tasks have been OOM Killed.

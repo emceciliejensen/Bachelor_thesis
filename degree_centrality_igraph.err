@@ -1,0 +1,2 @@
+/var/spool/slurmd/job11442/slurm_script: line 15: 2218432 Killed                  python3 /home/emcj/degree_centrality_igraph.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=11442.batch. Some of the step tasks have been OOM Killed.

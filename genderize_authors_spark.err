@@ -1,0 +1,47 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"Java/21.0.2"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "Java/21.0.2"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Lmod has detected the following error: The following module(s) are unknown:
+"Java/23.0.2"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "Java/23.0.2"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/var/spool/slurmd/job09435/slurm_script: line 18: /home/emcj/.miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CondaError: Run 'conda init' before 'conda activate'
+
+openjdk version "11.0.20" 2023-07-18
+OpenJDK Runtime Environment Temurin-11.0.20+8 (build 11.0.20+8)
+OpenJDK 64-Bit Server VM Temurin-11.0.20+8 (build 11.0.20+8, mixed mode)
+/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/bin/spark-class: line 71: /opt/itu/easybuild/software/Java/21.0.2/bin/java: No such file or directory
+/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+Traceback (most recent call last):
+  File "/home/emcj/assign_genders_spark.py", line 5, in <module>
+    spark = SparkSession.builder.appName("GenderAssignment").getOrCreate()
+  File "/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/sql/session.py", line 556, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/core/context.py", line 523, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/core/context.py", line 205, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/core/context.py", line 444, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+  File "/home/emcj/miniconda3/envs/myenv/lib/python3.10/site-packages/pyspark/java_gateway.py", line 111, in launch_gateway
+    raise PySparkRuntimeError(
+pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.

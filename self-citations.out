@@ -1,0 +1,23 @@
+Found 187771 self-citation(s). Saving to /home/emcj/data/MAG/Physics_random_sample_self_citations.csv.
+
+Sample of self-citations with gender info:
+      SourceAuthorId SourceGender TargetGender
+515        825562701          NaN          NaN
+1196      2120503107       female       female
+1502      2121958041         male         male
+1807      2124305004         male         male
+2114      2128670688          NaN          NaN
+
+Self-citation count by SourceGender:
+SourceGender
+NaN       91511
+male      83074
+female    13186
+Name: count, dtype: int64
+
+Cross-tabulation of SourceGender and TargetGender:
+TargetGender  female   male    NaN
+SourceGender                      
+female         13186      0      0
+male               0  83074      0
+NaN                0      0  91511

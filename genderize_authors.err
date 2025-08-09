@@ -1,0 +1,14 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"python"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "python"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/var/spool/slurmd/job09193/slurm_script: line 12: 4061710 Killed                  python /home/emcj/assign_genders_to_authors.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=9193.batch. Some of the step tasks have been OOM Killed.

@@ -1,0 +1,43 @@
+JAVA_HOME=/home/emcj/miniconda3/envs/myenv
+== Parsed Logical Plan ==
+'Project [unresolvedstarwithcolumns(Genderized, 'coalesce('Genderized, -3), None)]
++- Project [AuthorId#17, DisplayName#18, Country#19, FirstName#46, FirstName#44, Country#38, coalesce(Gender#39, unknown) AS Gender#47, Probability#40, Count#41, Genderized#42]
+   +- Join LeftOuter, (FirstName#46 = FirstName#44)
+      :- Project [AuthorId#17, DisplayName#18, Country#19, split(DisplayName#18,  , -1)[0] AS FirstName#46]
+      :  +- Relation [AuthorId#17,DisplayName#18,Country#19] csv
+      +- Project [FirstName#37 AS FirstName#44, Country#38, Gender#39, Probability#40, Count#41, Genderized#42]
+         +- Relation [FirstName#37,Country#38,Gender#39,Probability#40,Count#41,Genderized#42] csv
+
+== Analyzed Logical Plan ==
+AuthorId: string, DisplayName: string, Country: string, FirstName: string, FirstName: string, Country: string, Gender: string, Probability: string, Count: string, Genderized: bigint
+Project [AuthorId#17, DisplayName#18, Country#19, FirstName#46, FirstName#44, Country#38, Gender#47, Probability#40, Count#41, coalesce(cast(Genderized#42 as bigint), cast(-3 as bigint)) AS Genderized#48L]
++- Project [AuthorId#17, DisplayName#18, Country#19, FirstName#46, FirstName#44, Country#38, coalesce(Gender#39, unknown) AS Gender#47, Probability#40, Count#41, Genderized#42]
+   +- Join LeftOuter, (FirstName#46 = FirstName#44)
+      :- Project [AuthorId#17, DisplayName#18, Country#19, split(DisplayName#18,  , -1)[0] AS FirstName#46]
+      :  +- Relation [AuthorId#17,DisplayName#18,Country#19] csv
+      +- Project [FirstName#37 AS FirstName#44, Country#38, Gender#39, Probability#40, Count#41, Genderized#42]
+         +- Relation [FirstName#37,Country#38,Gender#39,Probability#40,Count#41,Genderized#42] csv
+
+== Optimized Logical Plan ==
+Project [AuthorId#17, DisplayName#18, Country#19, FirstName#46, FirstName#37, Country#38, coalesce(Gender#39, unknown) AS Gender#47, Probability#40, Count#41, coalesce(cast(Genderized#42 as bigint), -3) AS Genderized#48L]
++- Join LeftOuter, (FirstName#46 = FirstName#37)
+   :- Project [AuthorId#17, DisplayName#18, Country#19, split(DisplayName#18,  , -1)[0] AS FirstName#46]
+   :  +- Relation [AuthorId#17,DisplayName#18,Country#19] csv
+   +- Filter isnotnull(FirstName#37)
+      +- Relation [FirstName#37,Country#38,Gender#39,Probability#40,Count#41,Genderized#42] csv
+
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Project [AuthorId#17, DisplayName#18, Country#19, FirstName#46, FirstName#37, Country#38, coalesce(Gender#39, unknown) AS Gender#47, Probability#40, Count#41, coalesce(cast(Genderized#42 as bigint), -3) AS Genderized#48L]
+   +- SortMergeJoin [FirstName#46], [FirstName#37], LeftOuter
+      :- Sort [FirstName#46 ASC NULLS FIRST], false, 0
+      :  +- Exchange hashpartitioning(FirstName#46, 200), ENSURE_REQUIREMENTS, [plan_id=63]
+      :     +- Project [AuthorId#17, DisplayName#18, Country#19, split(DisplayName#18,  , -1)[0] AS FirstName#46]
+      :        +- FileScan csv [AuthorId#17,DisplayName#18,Country#19] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/emcj/data/MAG/AuthorCountries.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<AuthorId:string,DisplayName:string,Country:string>
+      +- Sort [FirstName#37 ASC NULLS FIRST], false, 0
+         +- Exchange hashpartitioning(FirstName#37, 200), ENSURE_REQUIREMENTS, [plan_id=64]
+            +- Filter isnotnull(FirstName#37)
+               +- FileScan csv [FirstName#37,Country#38,Gender#39,Probability#40,Count#41,Genderized#42] Batched: false, DataFilters: [isnotnull(FirstName#37)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/emcj/data/MAG/GenderizedFirstnames1.csv], PartitionFilters: [], PushedFilters: [IsNotNull(FirstName)], ReadSchema: struct<FirstName:string,Country:string,Gender:string,Probability:string,Count:string,Genderized:s...
+
+
+✅ Done! Output written to: /home/emcj/data/MAG/AuthorsGenderized.csv

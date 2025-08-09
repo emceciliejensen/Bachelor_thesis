@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=physics_random_sample_author_citations
+#SBATCH --output=physics_random_sample_author_citations.out
+#SBATCH --error=physics_random_sample_author_citations.err
+#SBATCH --time=12:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=128G
+#SBATCH --partition=scavenge
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate myenv
+
+python physics_random_sample_author_citations.py

@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=map_pap_authors
+#SBATCH --output=map_pap_authors.out
+#SBATCH --error=map_pap_authors.err
+#SBATCH --time=03:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=100G
+#SBATCH --partition=scavenge
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate myenv
+
+python mapping_papers_to_authors.py
+

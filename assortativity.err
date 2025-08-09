@@ -1,0 +1,2 @@
+/var/spool/slurmd/job11528/slurm_script: line 15: 764198 Killed                  python3 /home/emcj/assortativity.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=11528.batch. Some of the step tasks have been OOM Killed.

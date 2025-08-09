@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --job-name=field_filter
+#SBATCH --output=field_filter.out
+#SBATCH --error=field_filter.err
+#SBATCH --time=04:00:00
+#SBATCH --mem=64G
+#SBATCH --cpus-per-task=2
+#SBATCH --partition=scavenge
+
+source /home/emcj/miniconda3/etc/profile.d/conda.sh
+conda activate myenv
+
+python filter_field_from_PFOS.py
+
+

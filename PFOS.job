@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -J PFOS-job
+#SBATCH -o output.%j.out
+#SBATCH -e error.%j.err
+#SBATCH -c 2
+#SBATCH -t 04:00:00
+#SBATCH --mem=128G
+#SBATCH -p cores_any
+
+# DO NOT load the system-wide module!
+# Instead source YOUR conda installation:
+source $HOME/miniconda3/etc/profile.d/conda.sh
+conda activate myenv
+
+# Now run your script
+python PFOS.py
+
+
+

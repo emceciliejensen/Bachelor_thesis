@@ -1,0 +1,2 @@
+/var/spool/slurmd/job11445/slurm_script: line 15: 3433930 Killed                  python3 /home/emcj/unique_citing_authors.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=11445.batch. Some of the step tasks have been OOM Killed.
