@@ -12,3 +12,5 @@ miniconda.sh
 spark-3.4.1-bin-hadoop3.tgz
 spark-3.4.2-bin-hadoop3.tgz
 target_papers.csv
+spark-*.tgz
+spark/
