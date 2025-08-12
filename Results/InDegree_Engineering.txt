@@ -1,0 +1,20 @@
+Mann-Whitney U Test:
+U = 1715898460334.0
+p-value = 0
+
+Top 10% Gender Distribution:
+Gender
+male       0.611736
+unknown    0.325146
+female     0.063118
+
+Overall Gender Distribution:
+Gender
+male       0.542751
+unknown    0.369772
+female     0.087477
+Gini Coefficients by Gender (InDegree)
+Gender  Gini_InDegree
+  male            0.0
+
+Overall Gini (InDegree): 0.0000
