@@ -2,7 +2,7 @@ Repository for my bachelor thesis one an exploratoion of gender-bias in citation
 
 This repository contains script, jobs and jupyter notebooks used in this exploration.
 
-Due to file sizes of csvs used. These can instead be found in Bachelor thesis dropbox: LINK
+Due to file sizes of csvs used. These can instead be found in Bachelor thesis dropbox: https://www.dropbox.com/scl/fo/ochtkbod8fcbiqazx1nph/AMQXUdYOMYfbfA9U2KnkIjs?rlkey=swz12nr0u94kwq6skck8gqozc&st=9yui6rsj&dl=0 
 
 __explain how each code works.--
 
