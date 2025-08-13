@@ -1,13 +1,9 @@
 import pandas as pd
 
-# Constants
 FIELD_ID = 15744967  # psych
 INPUT_PATH = "/home/emcj/data/MAG/PaperFieldsOfStudy.csv"
 OUTPUT_PATH = "/home/emcj/data/MAG/psychology_PFOS.csv"
 CHUNKSIZE = 250_000
-
-# Start processing
-print("Starting simple chunked filtering...")
 
 first_chunk = True
 total_rows = 0
@@ -23,5 +19,4 @@ for chunk in pd.read_csv(INPUT_PATH, chunksize=CHUNKSIZE):
         print(f"Chunk {chunk_num}: wrote {len(filtered)} rows (total so far: {total_rows})")
         first_chunk = False
 
-print(f"\n✅ Done. Total rows written to {OUTPUT_PATH}: {total_rows}")
 
