@@ -6,18 +6,14 @@
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=2
 
-# Load conda and activate your environment
 source /home/emcj/miniconda3/etc/profile.d/conda.sh
 conda activate myenv
 
-# Tell Spark to use the Java from conda env
 export JAVA_HOME=$CONDA_PREFIX
 export PATH=$JAVA_HOME/bin:$PATH
 
-# Optional: log Java version to SLURM output
 echo "JAVA_HOME=$JAVA_HOME"
 java -version
 
-# Run your Spark Python script
 python /home/emcj/assign_genders_spark.py
 
