@@ -6,7 +6,6 @@
 #SBATCH --mem=100G
 #SBATCH --cpus-per-task=4
 
-#module load Python-bundle-PyPI/2024.06-GCCcore-13.3.0
 source /home/emcj/miniconda3/etc/profile.d/conda.sh
 conda activate myenv
 
