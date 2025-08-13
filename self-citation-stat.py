@@ -1,7 +1,6 @@
 import pandas as pd
 
 def compute_self_citation_stats(full_path, self_path):
-    # Load datasets
     df_all = pd.read_csv(full_path)
     df_self = pd.read_csv(self_path)
 
@@ -36,7 +35,6 @@ def compute_self_citation_stats(full_path, self_path):
     print(f"Male self-citations as % of self:    {percent_male_self:.2f}%")
     print(f"Female self-citations as % of self:  {percent_female_self:.2f}%")
 
-# === Example run ===
 if __name__ == "__main__":
     full_path = "Physics_Author_Citations_random_sample_Genderized.csv"
     self_path = "Physics_random_sample_self_citations.csv"
@@ -45,30 +43,3 @@ if __name__ == "__main__":
 
 
 
-
-
-#import pandas as pd
-
-#def compute_and_save_self_citation_summary(full_path, self_path, output_csv):
-#    df_full = pd.read_csv(full_path)
-#    df_self = pd.read_csv(self_path)
-
-#    total = len(df_full)
-#    self_cites = len(df_self)
-#    percent = round((self_cites / total) * 100, 2) if total else 0.0
-
-#    result = pd.DataFrame([{
-#        "TotalCitations": total,
-#        "SelfCitations": self_cites,
-#        "PercentSelfCitations": percent
-#    }])
-
-#    result.to_csv(output_csv, index=False)
-#    print(f"Stats saved to {output_csv}")
-
-
-#compute_and_save_self_citation_summary(
-#     "/home/emcj/data/MAG/Psychology_Author_Citations_Genderized.csv",
-#     "/home/emcj/data/MAG/Psychology_self_citations.csv",
-#     "/home/emcj/data/MAG/Psychology_self_summary.csv"
-#)
