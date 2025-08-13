@@ -15,7 +15,6 @@ def check_self_citations_with_gender(csv_path, output_path='/home/emcj/data/MAG/
 
         self_cites.to_csv(output_path, index=False)
 
-        # Optional: Gender summary
         print("\nSelf-citation count by SourceGender:")
         print(self_cites['SourceGender'].value_counts(dropna=False))
 
