@@ -7,10 +7,8 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --partition=scavenge
 
-# Activate conda environment
 source /home/emcj/miniconda3/etc/profile.d/conda.sh
 conda activate myenv
 
-# Run script
 python3 /home/emcj/count_citations.py
 
