@@ -1,4 +1,3 @@
-# add_header.py
 input_path = "/home/emcj/data/MAG/PaperFieldsOfStudy.txt"
 output_path = "PaperFieldsOfStudy_with_header.txt"
 columns = ['PaperId', 'FieldOfStudyId', 'Score']
