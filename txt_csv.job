@@ -7,12 +7,9 @@
 #SBATCH --mem=64G
 #SBATCH -p cores_any
 
-# DO NOT load the system-wide module!
-# Instead source YOUR conda installation:
 source $HOME/miniconda3/etc/profile.d/conda.sh
 conda activate myenv
 
-# Now run your script
 python ConvertTxtToCsv.py
 
 
