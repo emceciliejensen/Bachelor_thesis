@@ -8,7 +8,6 @@ def filter_paper_author_affiliations(paper_ids_file, affiliations_file, output_f
 
     filtered.write_csv(output_file)
 
-# Usage
 if __name__ == "__main__":
     filter_paper_author_affiliations("/home/emcj/data/MAG/Physics_FilteredPaperIds.csv", "/home/emcj/data/MAG/PaperAuthorAffiliations.csv", "/home/emcj/data/MAG/Physics_Author_Papers.csv")
 
