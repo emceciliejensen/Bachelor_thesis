@@ -80,5 +80,3 @@ final_df = final_df.with_columns(
 
 final_df.write_csv(output_path)
 
-if os.path.exists(checkpoint_path):
-    os.remove(checkpoint_path)
