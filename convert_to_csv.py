@@ -12,7 +12,6 @@ with open(input_file, 'r', encoding='utf-8') as infile, \
     for row in reader:
         writer.writerow(row)
 
-print("[DONE] TSV to CSV conversion complete.")
 
 
 
