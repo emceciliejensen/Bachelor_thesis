@@ -1,6 +1,1 @@
 
-[DEBUG] Reading first few rows from: /home/emcj/data/MAG/Cleaned_Authors_Genderized.csv
-[DEBUG] Columns found: ['AuthorId', 'DisplayName', 'Country', 'Gender', 'Genderized']
-
-[DEBUG] Reading first few rows from: /home/emcj/data/MAG/Physics_Author_Citations_top_1000.csv
-[DEBUG] Columns found: ['SourceAuthorId', 'TargetAuthorId']
