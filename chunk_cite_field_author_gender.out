@@ -1,8 +1,5 @@
 [INFO] Script started
 [DEBUG] Checking file: /home/emcj/data/MAG/Cleaned_Authors_Genderized.csv
-[DEBUG] Columns found: ['AuthorId', 'DisplayName', 'Country', 'Gender', 'Genderized']
-[DEBUG] Checking file: /home/emcj/data/MAG/Medicine_Author_Citations.csv
-[DEBUG] Columns found: ['SourceAuthorId', 'TargetAuthorId']
 [INFO] Processing batch #0
 [INFO] Processing batch #1
 [INFO] Processing batch #2
