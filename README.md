@@ -3,7 +3,8 @@ The repository has two branches as I encountered complications when trying to me
 
 This repository contains script, jobs and jupyter notebooks used in this exploration.
 
-Due to the file sizes of csvs used. These can instead be found in the bachelor thesis dropbox: https://www.dropbox.com/scl/fo/ochtkbod8fcbiqazx1nph/AMQXUdYOMYfbfA9U2KnkIjs?rlkey=swz12nr0u94kwq6skck8gqozc&st=9yui6rsj&dl=0 
+Due to the file sizes of csvs used. These can instead be found in the bachelor thesis dropbox: 
+https://www.dropbox.com/scl/fo/ochtkbod8fcbiqazx1nph/AMQXUdYOMYfbfA9U2KnkIjs?rlkey=swz12nr0u94kwq6skck8gqozc&st=9yui6rsj&dl=0 
 
 
 Disclaimer: Some notebooks contain "medicine" as a field. This was a field that was explored, but left out due to its size.
