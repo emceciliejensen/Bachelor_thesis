@@ -1,4 +1,5 @@
 Repository for my bachelor thesis one an exploration of gender-bias in citation networks.
+The repository has two branches as I encountered complications when trying to merge them.
 
 This repository contains script, jobs and jupyter notebooks used in this exploration.
 
